@@ -1,12 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<TargetFramework>net6.0</TargetFramework>
     <AssemblyName>Herkinds.InsuranceMath.Stochastics</AssemblyName>
     <RootNamespace>Herkinds.InsuranceMath.Stochastics</RootNamespace>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <CodeAnalysisRuleSet>..\..\rulesets\StyleCop.ruleset</CodeAnalysisRuleSet>
+	<ImplicitUsings>disable</ImplicitUsings>
+	<Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
