@@ -15,6 +15,16 @@ namespace Herkinds.InsuranceMath.Stochastics
         }
 
         /// <summary>
+        /// Gets a probability of 100%.
+        /// </summary>
+        public static Probability One => new Probability(1);
+
+        /// <summary>
+        /// Gets a probability of 0%.
+        /// </summary>
+        public static Probability Zero => new Probability(0);
+
+        /// <summary>
         /// Implicit cast to <see cref="decimal"/>.
         /// </summary>
         /// <param name="probability">A probability.</param>
