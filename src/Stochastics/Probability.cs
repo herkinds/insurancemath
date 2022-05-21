@@ -1,24 +1,24 @@
 ﻿using System;
 
-namespace Stochastics
+namespace Herkinds.InsuranceMath.Stochastics
 {
     /// <summary>
-    /// A facade for <see cref="double"/>. Probabilities are numbers between 0 and 1, both including.
+    /// A facade for <see cref="decimal"/>. Probabilities are numbers between 0 and 1, both including.
     /// </summary>
     public readonly struct Probability : IEquatable<Probability>
     {
-        private readonly double value;
+        private readonly decimal value;
 
-        private Probability(double value)
+        private Probability(decimal value)
         {
             this.value = value;
         }
 
         /// <summary>
-        /// Implicit cast to <see cref="double"/>.
+        /// Implicit cast to <see cref="decimal"/>.
         /// </summary>
         /// <param name="probability">A probability.</param>
-        public static implicit operator double(Probability probability)
+        public static implicit operator decimal(Probability probability)
             => probability.value;
 
         /// <summary>
@@ -44,11 +44,11 @@ namespace Stochastics
         }
 
         /// <summary>
-        /// Parses a specified <see cref="double"/> to a <see cref="Probability"/>.
+        /// Parses a specified <see cref="decimal"/> to a <see cref="Probability"/>.
         /// </summary>
-        /// <param name="value">The <see cref="double"/> value to parse.</param>
+        /// <param name="value">The <see cref="decimal"/> value to parse.</param>
         /// <returns>A probability.</returns>
-        public static Probability Parse(double value)
+        public static Probability Parse(decimal value)
         {
             if (value > 1)
             {
@@ -64,10 +64,10 @@ namespace Stochastics
         }
 
         /// <summary>
-        /// Converts this instance to a double.
+        /// Converts this instance to a <see cref="decimal"/>.
         /// </summary>
-        /// <returns>The <see cref="double"/> value of the probability.</returns>
-        public double ToDouble()
+        /// <returns>The <see cref="decimal"/> value of the probability.</returns>
+        public decimal ToDecimal()
             => this.value;
 
         /// <inheritdoc/>
