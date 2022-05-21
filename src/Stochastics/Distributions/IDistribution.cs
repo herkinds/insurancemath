@@ -6,7 +6,7 @@ namespace Herkinds.InsuranceMath.Stochastics.Distributions
     /// A probability distribution.
     /// </summary>
     /// <typeparam name="TDomain">The type of the domain on which the probability distribution is defined.</typeparam>
-    public interface IDistribution<in TDomain>
+    public interface IDistribution<TDomain>
         where TDomain : IComparable<TDomain>
     {
         /// <summary>
@@ -15,5 +15,11 @@ namespace Herkinds.InsuranceMath.Stochastics.Distributions
         /// <param name="boundary">The boundary.</param>
         /// <returns>The probability.</returns>
         Probability CumulativeDistributionFunction(TDomain boundary);
+
+        /// <summary>
+        /// Draws an element from the probability distribution.
+        /// </summary>
+        /// <returns>An element drawn from the probability distribution.</returns>
+        TDomain Draw();
     }
 }

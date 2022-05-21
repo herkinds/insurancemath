@@ -29,5 +29,9 @@
 
             return Probability.Zero;
         }
+
+        /// <inheritdoc/>
+        public decimal Draw()
+            => this.Point;
     }
 }
