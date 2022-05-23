@@ -1,15 +1,19 @@
-﻿namespace Herkinds.InsuranceMath.Stochastics.Distributions
+﻿using System;
+
+namespace Herkinds.InsuranceMath.Stochastics.Distributions
 {
     /// <summary>
     /// A point mass probability distribution, where all probability mass is on a single point.
     /// </summary>
-    public class PointMassDistribution : IDistribution<decimal>
+    /// <typeparam name="TDomain">The domain on which the probability distribution is defined.</typeparam>
+    public class PointMassDistribution<TDomain> : IDistribution<TDomain>
+        where TDomain : IComparable<TDomain>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PointMassDistribution"/> class.
+        /// Initializes a new instance of the <see cref="PointMassDistribution{TDomain}"/> class.
         /// </summary>
         /// <param name="point">The point on which all probability mass lies.</param>
-        public PointMassDistribution(decimal point)
+        public PointMassDistribution(TDomain point)
         {
             this.Point = point;
         }
@@ -17,12 +21,12 @@
         /// <summary>
         /// Gets the point on which all probability mass lies.
         /// </summary>
-        public decimal Point { get; }
+        public TDomain Point { get; }
 
         /// <inheritdoc/>
-        public Probability CumulativeDistributionFunction(decimal boundary)
+        public Probability CumulativeDistributionFunction(TDomain boundary)
         {
-            if (this.Point <= boundary)
+            if (this.Point.CompareTo(boundary) <= 0)
             {
                 return Probability.One;
             }
@@ -31,7 +35,7 @@
         }
 
         /// <inheritdoc/>
-        public decimal Draw()
+        public TDomain Draw()
             => this.Point;
     }
 }
