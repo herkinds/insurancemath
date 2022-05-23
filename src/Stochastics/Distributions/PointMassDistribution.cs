@@ -3,7 +3,8 @@
 namespace Herkinds.InsuranceMath.Stochastics.Distributions
 {
     /// <summary>
-    /// A point mass probability distribution, where all probability mass is on a single point.
+    /// A point mass probability distribution, where all probability mass is on a single point. Some might
+    /// also know this distribution as the Dirac delta function.
     /// </summary>
     /// <typeparam name="TDomain">The domain on which the probability distribution is defined.</typeparam>
     public class PointMassDistribution<TDomain> : IProbabilityDistribution<TDomain>
