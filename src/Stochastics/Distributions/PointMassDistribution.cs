@@ -6,7 +6,7 @@ namespace Herkinds.InsuranceMath.Stochastics.Distributions
     /// A point mass probability distribution, where all probability mass is on a single point.
     /// </summary>
     /// <typeparam name="TDomain">The domain on which the probability distribution is defined.</typeparam>
-    public class PointMassDistribution<TDomain> : IDistribution<TDomain>
+    public class PointMassDistribution<TDomain> : IProbabilityDistribution<TDomain>
         where TDomain : IComparable<TDomain>
     {
         /// <summary>

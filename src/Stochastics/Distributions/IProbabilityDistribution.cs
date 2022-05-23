@@ -6,7 +6,7 @@ namespace Herkinds.InsuranceMath.Stochastics.Distributions
     /// A probability distribution.
     /// </summary>
     /// <typeparam name="TDomain">The type of the domain on which the probability distribution is defined.</typeparam>
-    public interface IDistribution<TDomain>
+    public interface IProbabilityDistribution<TDomain>
         where TDomain : IComparable<TDomain>
     {
         /// <summary>
