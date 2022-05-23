@@ -9,7 +9,7 @@ namespace Herkinds.InsuranceMath.Stochastics.Distributions
     /// </summary>
     public class BernoulliDistribution : IProbabilityDistribution<bool>
     {
-        private IRandomNumberGenerator<Probability> generator;
+        private readonly IRandomNumberGenerator<Probability> generator;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BernoulliDistribution"/> class.
