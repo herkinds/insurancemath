@@ -80,6 +80,15 @@ namespace Herkinds.InsuranceMath.Stochastics
         public decimal ToDecimal()
             => this.value;
 
+        /// <summary>
+        /// Computes the complement of the probability, i.e. 1 - p.
+        /// </summary>
+        /// <returns>The complement of the probability, i.e. 1 - p.</returns>
+        public Probability Complement()
+        {
+            return new Probability(1m - this.value);
+        }
+
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
