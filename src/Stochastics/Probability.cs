@@ -58,19 +58,32 @@ namespace Herkinds.InsuranceMath.Stochastics
         /// </summary>
         /// <param name="value">The <see cref="decimal"/> value to parse.</param>
         /// <returns>A probability.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">If the number lies outside the range [0, 1].</exception>
         public static Probability Parse(decimal value)
         {
             if (value > 1)
             {
-                throw new ArgumentException($"The {nameof(value)} of {value} should be smaller than 1.");
+                throw new ArgumentOutOfRangeException($"The {nameof(value)} of {value} should be smaller than 1.");
             }
 
             if (value < 0)
             {
-                throw new ArgumentException($"The {nameof(value)} of {value} should be greater than 0.");
+                throw new ArgumentOutOfRangeException($"The {nameof(value)} of {value} should be greater than 0.");
             }
 
             return new Probability(value);
+        }
+
+        /// <summary>
+        /// Parses a specified <see cref="double"/> to a <see cref="Probability"/>.
+        /// </summary>
+        /// <param name="value">The <see cref="double"/> value to parse.</param>
+        /// <returns>A probability.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">If the number lies outside the range [0, 1].</exception>
+        public static Probability Parse(double value)
+        {
+            var decimalValue = Convert.ToDecimal(value);
+            return Probability.Parse(decimalValue);
         }
 
         /// <summary>
