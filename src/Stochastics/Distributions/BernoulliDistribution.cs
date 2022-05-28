@@ -1,10 +1,9 @@
 ﻿using System;
-using Herkinds.InsuranceMath.Stochastics.RandomNumberGenerator;
 
 namespace Herkinds.InsuranceMath.Stochastics.Distributions
 {
     /// <summary>
-    /// The Bernoulli distribution defines success (i.e. 'true') of failure ('false') by a probability. This 
+    /// The Bernoulli distribution defines success (i.e. 'true') of failure ('false') by a probability. This
     /// distribution is like a coin flip for heads (or tails).
     /// </summary>
     public class BernoulliDistribution : IProbabilityDistribution<bool>

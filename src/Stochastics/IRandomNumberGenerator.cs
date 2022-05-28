@@ -1,4 +1,4 @@
-﻿namespace Herkinds.InsuranceMath.Stochastics.RandomNumberGenerator
+﻿namespace Herkinds.InsuranceMath.Stochastics
 {
     /// <summary>
     /// A pseudo-random number generator interface.

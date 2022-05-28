@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		rulesets\StyleCop.ruleset = rulesets\StyleCop.ruleset
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomNumberGeneration", "src\RandomNumberGeneration\RandomNumberGeneration.csproj", "{3514E873-BF9E-4207-9DCB-7B555A5C692E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{21BFCC57-FB37-4CD2-84EC-715523F55778}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21BFCC57-FB37-4CD2-84EC-715523F55778}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21BFCC57-FB37-4CD2-84EC-715523F55778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3514E873-BF9E-4207-9DCB-7B555A5C692E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3514E873-BF9E-4207-9DCB-7B555A5C692E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3514E873-BF9E-4207-9DCB-7B555A5C692E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3514E873-BF9E-4207-9DCB-7B555A5C692E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
