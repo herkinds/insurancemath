@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Herkinds.InsuranceMath.Stochastics
 {
@@ -127,6 +128,12 @@ namespace Herkinds.InsuranceMath.Stochastics
         public override int GetHashCode()
         {
             return this.value.GetHashCode();
+        }
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            return (this.value * 100).ToString(CultureInfo.InvariantCulture) + " %";
         }
     }
 }
