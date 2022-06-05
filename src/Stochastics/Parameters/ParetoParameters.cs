@@ -1,12 +1,12 @@
 ﻿namespace Herkinds.InsuranceMath.Stochastics.Parameters
 {
     /// <summary>
-    /// Parameters for the <see cref="Distributions.ParetoDistribution"/>. The Pareto parameters 
+    /// Parameters for the <see cref="Distributions.ParetoDistribution"/>. The Pareto parameters
     /// are the shape and the scale.
     /// </summary>
     public class ParetoParameters
     {
-        private ParetoParameters(decimal shape, decimal scale)
+        private ParetoParameters(double shape, double scale)
         {
             this.Shape = shape;
             this.Scale = scale;
@@ -15,12 +15,12 @@
         /// <summary>
         /// Gets the shape. The shape parameter is also called the alpha.
         /// </summary>
-        public decimal Shape { get; }
+        public double Shape { get; }
 
         /// <summary>
         /// Gets the scale. The scale parameter is also called the minimum value.
         /// </summary>
-        public decimal Scale { get; }
+        public double Scale { get; }
 
         /// <summary>
         /// Creates Pareto distribution parameters.
@@ -29,7 +29,7 @@
         /// <param name="scale">The scale parameter.</param>
         /// <returns>The Pareto distribution parameters.</returns>
         /// <exception cref="ArgumentException">If either shape or scale is not striclty positive.</exception>
-        public static ParetoParameters Create(decimal shape, decimal scale)
+        public static ParetoParameters Create(double shape, double scale)
         {
             if (shape <= 0)
             {
