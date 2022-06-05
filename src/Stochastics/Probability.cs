@@ -94,6 +94,13 @@ namespace Herkinds.InsuranceMath.Stochastics
             => this.value;
 
         /// <summary>
+        /// Converts this instance to a <see cref="double"/>.
+        /// </summary>
+        /// <returns>The <see cref="double"/> value of the probability.</returns>
+        public double ToDouble()
+            => decimal.ToDouble(this.value);
+
+        /// <summary>
         /// Computes the complement of the probability, i.e. 1 - p.
         /// </summary>
         /// <returns>The complement of the probability, i.e. 1 - p.</returns>
