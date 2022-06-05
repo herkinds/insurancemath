@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Herkinds.InsuranceMath.Stochastics.Distributions
+﻿namespace Herkinds.InsuranceMath.Stochastics.Distributions
 {
     /// <summary>
     /// The Bernoulli distribution defines success (i.e. 'true') of failure ('false') by a probability. This

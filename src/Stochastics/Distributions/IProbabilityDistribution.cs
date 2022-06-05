@@ -7,7 +7,7 @@ namespace Herkinds.InsuranceMath.Stochastics.Distributions
     /// </summary>
     /// <typeparam name="TDomain">The type of the domain on which the probability distribution is defined.</typeparam>
     public interface IProbabilityDistribution<TDomain>
-        where TDomain : IComparable<TDomain>
+        where TDomain : struct, IComparable<TDomain>
     {
         /// <summary>
         /// Computes the cumulative distribution function.

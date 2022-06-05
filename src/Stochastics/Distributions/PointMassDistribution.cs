@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Herkinds.InsuranceMath.Stochastics.Distributions
+﻿namespace Herkinds.InsuranceMath.Stochastics.Distributions
 {
     /// <summary>
     /// A point mass probability distribution, where all probability mass is on a single point. Some might
@@ -8,7 +6,7 @@ namespace Herkinds.InsuranceMath.Stochastics.Distributions
     /// </summary>
     /// <typeparam name="TDomain">The domain on which the probability distribution is defined.</typeparam>
     public class PointMassDistribution<TDomain> : IProbabilityDistribution<TDomain>
-        where TDomain : IComparable<TDomain>
+        where TDomain : struct, IComparable<TDomain>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PointMassDistribution{TDomain}"/> class.
