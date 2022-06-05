@@ -3,7 +3,7 @@
 namespace Herkinds.InsuranceMath.RandomNumberGeneration
 {
     /// <summary>
-    /// A simple uniform probability distribution based on the implementationr of <see cref="Random.NextDouble"/>.
+    /// A simple uniform probability distribution based on the implementation of <see cref="Random.NextDouble"/>.
     /// </summary>
     public class UniformProbabilityGenerator : IRandomNumberGenerator<Probability>
     {
