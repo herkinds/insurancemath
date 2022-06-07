@@ -1,4 +1,3 @@
-
 namespace Stochastics.Tests
 {
     public class ProbabilityTest
