@@ -63,6 +63,11 @@
         /// <exception cref="ArgumentOutOfRangeException">If k is greater than n or k is smaller than 0.</exception>
         public int Get(int k)
         {
+            if (k > this.n || k < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(k));
+            }
+
             return this.coefficients[this.n][k];
         }
 
