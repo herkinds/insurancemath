@@ -24,8 +24,14 @@
         /// </summary>
         /// <param name="n">The maximum number to choose from.</param>
         /// <returns>The binomial coefficients.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">If n is smaller than 0.</exception>
         public static BinomialCoefficients ComputeAndCreate(int n)
         {
+            if (n < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(n));
+            }
+
             int i, j;
 
             var coefficients = new int[n + 1][];
@@ -54,6 +60,7 @@
         /// </summary>
         /// <param name="k">The number to choose.</param>
         /// <returns>The binomial coefficient.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">If k is greater than n or k is smaller than 0.</exception>
         public int Get(int k)
         {
             return this.coefficients[this.n][k];
@@ -65,8 +72,20 @@
         /// <param name="n">The number to choose from.</param>
         /// <param name="k">The number to choose.</param>
         /// <returns>The binomial coefficient.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">If n is smaller than 0;
+        /// if k is greater than n or k is smaller than 0.</exception>
         public int Get(int n, int k)
         {
+            if (n < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(n));
+            }
+
+            if (k > n || k < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(k));
+            }
+
             return this.coefficients[n][k];
         }
     }
