@@ -7,7 +7,7 @@ namespace Herkinds.InsuranceMath.Stochastics
     /// </summary>
     public readonly struct Probability : IEquatable<Probability>
     {
-        private readonly decimal value;
+        private readonly decimal value = 0;
 
         private Probability(decimal value)
         {
